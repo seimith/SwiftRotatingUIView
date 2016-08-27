@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RotatingUIView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vb-48-ftd">
+                                <rect key="frame" x="250" y="100" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="FVl-CR-0iz"/>
+                                    <constraint firstAttribute="width" constant="100" id="eXN-gm-iFC"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="250" width="100" height="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="350" width="100" height="100"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VK-ZD-dGV">
+                                <rect key="frame" x="250" y="400" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="VYo-lm-b0E"/>
+                                    <constraint firstAttribute="width" constant="100" id="aZM-bj-f1i"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="491" width="100" height="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="591" width="100" height="100"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alL-BK-eF6">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mcg-0i-ZhF"/>
+                                    <constraint firstAttribute="width" constant="100" id="xpT-Gn-hCl"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="370" width="100" height="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="150" y="470" width="100" height="100"/>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1VK-ZD-dGV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ep-14-KH8"/>
+                            <constraint firstItem="1VK-ZD-dGV" firstAttribute="top" secondItem="alL-BK-eF6" secondAttribute="bottom" constant="50" id="D7b-WQ-cWW"/>
+                            <constraint firstItem="alL-BK-eF6" firstAttribute="top" secondItem="3vb-48-ftd" secondAttribute="bottom" constant="50" id="R2X-u0-V9x"/>
+                            <constraint firstItem="3vb-48-ftd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c36-e6-lRQ"/>
+                            <constraint firstItem="alL-BK-eF6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p4G-gQ-pVZ"/>
+                            <constraint firstItem="alL-BK-eF6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rFg-By-g3y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myBloodOrangeSpinner" destination="1VK-ZD-dGV" id="vLd-sg-UJg"/>
+                        <outlet property="mySpinnerView" destination="alL-BK-eF6" id="Uig-tA-nCA"/>
+                        <outlet property="myYellowSpinner" destination="3vb-48-ftd" id="rAV-Ld-2xF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
