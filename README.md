@@ -6,4 +6,4 @@ http://seimith.github.io/swift/uiview/views/tutorial/animation/2016/08/28/Swift-
 ### To Run This
 
 - git clone
-- open `SwiftNavigationControl.xcodeproj`
+- open `SwiftRotatingUIView.xcodeproj`
